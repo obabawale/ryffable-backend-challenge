@@ -11,8 +11,9 @@ Remember to consistently commit your progress throughout your development!
 You will need to use the following technologies for the project:
 
 ## Task
-- Create a test api endpoint using DRF with the following model parameters: name, place, animal, food, things
-- Create a data source in an excel file with the above parameters and Populate it with data in alphabetical order from A to Z.
+- Create a model, admin and endpoints using DRF with the following model parameters: name, place, animal, food, things
+ You can call the model whatever you think is appropriate.
+- Create a data source in a csv file with the above parameters and Populate it with data in alphabetical order from A to Z.
 - Write a function that writes all the data from csv file into the db.
 - Add full endpoints for POST, GET, PUT, PATCH, and DELETE.
 - Add paginations, filtering and sorting in aphabetical order based on name, animal and things.

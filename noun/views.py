@@ -1,3 +1,11 @@
-from django.shortcuts import render
+from .models import Noun
+from rest_framework import viewsets
+from noun.serializers import NounSerializer
 
-# Create your views here.
+
+class NounViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows nouns to be viewed or edited.
+    """
+    queryset = Noun.objects.all().order_by('-name')
+    serializer_class = NounSerializer

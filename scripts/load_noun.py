@@ -5,8 +5,8 @@ import csv
 def run():
     with open('noun/noun_data.csv') as file:
         reader = csv.reader(file)
-        next(reader)  # Advance past the header
-
+        next(reader)
+        
         Noun.objects.all().delete()
 
         for row in reader:

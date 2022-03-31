@@ -13,10 +13,10 @@ def run():
             print(row)
 
             noun = Noun(
-                title=row[0],
-                title=row[1],
-                title=row[2],
-                title=row[3],
-                title=row[4],
+                name=row[0],
+                place=row[1],
+                animal=row[2],
+                food=row[3],
+                things=row[4],
             )
             noun.save()

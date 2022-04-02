@@ -5,6 +5,8 @@ from noun import views
 
 router = routers.DefaultRouter()
 router.register(r'nouns', views.NounViewSet)
+router.register(r'places', views.PlaceViewSet)
+router.register(r'animals', views.AnimalViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

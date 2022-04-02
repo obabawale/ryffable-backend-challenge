@@ -10,6 +10,9 @@ class FoodViewSet(viewsets.ModelViewSet):
     """
     queryset = Food.objects.all().order_by('id')
     serializer_class = FoodSerializer
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['name']
+    filterset_fields = ['name']
 
 
 class ThingViewSet(viewsets.ModelViewSet):
@@ -18,6 +21,9 @@ class ThingViewSet(viewsets.ModelViewSet):
     """
     queryset = Thing.objects.all().order_by('id')
     serializer_class = ThingSerializer
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['name']
+    filterset_fields = ['name']
 
 
 class AnimalViewSet(viewsets.ModelViewSet):
@@ -26,6 +32,9 @@ class AnimalViewSet(viewsets.ModelViewSet):
     """
     queryset = Animal.objects.all().order_by('id')
     serializer_class = AnimalSerializer
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['name']
+    filterset_fields = ['name']
 
 
 class PlaceViewSet(viewsets.ModelViewSet):
@@ -34,6 +43,9 @@ class PlaceViewSet(viewsets.ModelViewSet):
     """
     queryset = Place.objects.all().order_by('id')
     serializer_class = PlaceSerializer
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['name']
+    filterset_fields = ['name']
 
 
 class NounViewSet(viewsets.ModelViewSet):

@@ -1,6 +1,8 @@
 from .models import Noun, Place, Animal, Food, Thing
 from rest_framework import viewsets
+from django_filters.rest_framework import DjangoFilterBackend
 from noun.serializers import NounSerializer, PlaceSerializer, AnimalSerializer, FoodSerializer, ThingSerializer
+from rest_framework import generics, filters
 
 
 class FoodViewSet(viewsets.ModelViewSet):
@@ -41,3 +43,8 @@ class NounViewSet(viewsets.ModelViewSet):
     """
     queryset = Noun.objects.all().order_by('id')
     serializer_class = NounSerializer
+    filter_backends = [filters.SearchFilter, filters.OrderingFilter]
+    search_fields = ['name', 'place', 'animal', 'food', 'things']
+    filterset_fields = ['name']
+    ordering_fields = ['name', 'animal', 'things']
+    ordering = ['name']

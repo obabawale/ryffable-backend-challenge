@@ -6,7 +6,6 @@ def run():
     with open('noun/noun_data.csv') as file:
         reader = csv.reader(file)
         next(reader)
-        
         Noun.objects.all().delete()
 
         for row in reader:

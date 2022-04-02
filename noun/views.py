@@ -1,8 +1,7 @@
 from .models import Noun, Place, Animal, Food, Thing
 from rest_framework import viewsets
-from django_filters.rest_framework import DjangoFilterBackend
 from noun.serializers import NounSerializer, PlaceSerializer, AnimalSerializer, FoodSerializer, ThingSerializer
-from rest_framework import generics, filters
+from rest_framework import filters
 
 
 class FoodViewSet(viewsets.ModelViewSet):

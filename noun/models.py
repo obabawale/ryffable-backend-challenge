@@ -32,9 +32,9 @@ class Thing(models.Model):
 
 class Noun(models.Model):
     name = models.CharField(max_length=64)
-    place = models.ForeignKey(Place,  on_delete=models.CASCADE)
-    animal = models.ForeignKey(Animal,  on_delete=models.CASCADE)
-    food = models.ForeignKey(Food,  on_delete=models.CASCADE)
+    place = models.ForeignKey(Place, on_delete=models.CASCADE)
+    animal = models.ForeignKey(Animal, on_delete=models.CASCADE)
+    food = models.ForeignKey(Food, on_delete=models.CASCADE)
     things = models.ManyToManyField(Thing)
 
     def __str__(self) -> str:

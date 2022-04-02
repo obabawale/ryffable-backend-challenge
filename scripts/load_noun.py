@@ -26,5 +26,4 @@ def run():
             )
             noun.save()
             for thing in things:
-                print("*************** thing ********************", thing)
                 noun.things.create(name=thing)

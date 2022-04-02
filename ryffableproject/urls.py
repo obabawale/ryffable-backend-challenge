@@ -7,10 +7,10 @@ router = routers.DefaultRouter()
 router.register(r'nouns', views.NounViewSet)
 router.register(r'places', views.PlaceViewSet)
 router.register(r'animals', views.AnimalViewSet)
+router.register(r'foods', views.FoodViewSet)
+router.register(r'things', views.ThingViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('noun/', include('noun.urls')),
     path('', include(router.urls)),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]

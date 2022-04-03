@@ -55,7 +55,7 @@ class NounViewSet(viewsets.ModelViewSet):
     queryset = Noun.objects.all().order_by('id')
     serializer_class = NounSerializer
     filter_backends = [filters.SearchFilter, filters.OrderingFilter]
-    search_fields = ['name', 'place', 'animal', 'food', 'things']
+    search_fields = ['name', 'place__name', 'animal__name', 'food__name', 'things__name']
     filterset_fields = ['name']
     ordering_fields = ['name', 'animal', 'things']
     ordering = ['name']

@@ -36,3 +36,8 @@ You will be assessed based on:
 
 ## Submission
 Kindly submit your production ready code by creating a pull request to github, and deploying the final product through heroku.
+
+
+## Testing out the API's
+
+Please proceed to the following [link](https://ryffable-assessment.herokuapp.com/) to test our the API's
